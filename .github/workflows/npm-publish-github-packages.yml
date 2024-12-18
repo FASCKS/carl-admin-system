@@ -24,5 +24,6 @@ jobs:
                   port: ${{ secrets.SERVER_PORT }} #你的nginx服务器ssh端口
                   user: ${{ secrets.USERNAME }} #你的nginx服务器用户名
                   pass: ${{ secrets.PASSWORD }} #你的nginx服务器密码
-                  scp: dist =>/home/web/ 
+                  scp: |
+                    dist => /home/web/ 
                #   remoteDir: ${{ secrets.SERVER_DESTINATION }} #你要把你build好的文件夹放到nginx服务器上的什么位置，一般都是nginx配置的站点路径
